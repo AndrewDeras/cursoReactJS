@@ -18,9 +18,6 @@ function App() {
 
   const { data: items, httpConfig, loading, error } = useFetch(url);
 
-  // tarefa
-  const [productID, setProductID] = useState(null);
-
   // 1 -  resgatando dados
 
   // useEffect(() => {
@@ -62,10 +59,10 @@ function App() {
     setPrice('');
   };
 
-  const handleRemove = async (id , event) => {
-    event.preventDefault();
+  //desafio
 
-    httpConfig(`${url}/${id}`, 'DELETE');
+  const handleRemove = async (id) => {
+    httpConfig(id, 'DELETE')
   }
 
   return (

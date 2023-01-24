@@ -16,19 +16,9 @@
       "price": 29.9
     },
     {
-      "name": "Tênis Run Falcon 2.0",
-      "price": "250.0",
-      "id": 4
-    },
-    {
       "name": "Ventilador Arno",
       "price": "150.0",
       "id": 5
-    },
-    {
-      "name": "Fanta maracuja ",
-      "price": "6",
-      "id": 6
     },
     {
       "name": "Redmi note 8",
@@ -46,14 +36,9 @@
       "id": 9
     },
     {
-      "name": "Xbox one s",
-      "price": "1600",
+      "name": "Memoria ram 8gb",
+      "price": "68",
       "id": 10
-    },
-    {
-      "name": "Controle xbox one s",
-      "price": "300",
-      "id": 11
     }
   ]
 }

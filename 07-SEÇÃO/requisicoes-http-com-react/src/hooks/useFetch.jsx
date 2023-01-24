@@ -19,6 +19,8 @@ export const useFetch = (url) => {
 
   //8 - desafio
 
+  const [itemId, setItemId] = useState(null);
+
 
   const httpConfig = (data, method) => {
     if (method === 'POST') {
@@ -35,9 +37,10 @@ export const useFetch = (url) => {
         method,
         headers: {
           "Content-Type": "application/json"
-        }
+        },
       });
-      setMethod(method)
+      setMethod(method);
+      setItemId(data);
     }
   };
 
@@ -71,14 +74,14 @@ export const useFetch = (url) => {
 
       } else if (method === 'DELETE') {
 
-        let deleteURL = url;
-        const res = await fetch(deleteURL, config);
+        const deleteUrl = `${url}/${itemId}`;
+        const res = await fetch(deleteUrl, config);
         const json = await res.json();
         setCallFetch(json);
       }
     }
     httpRequest();
-  }, [config, method, url]);
+  }, [config, method, url, itemId]);
 
   return { data, httpConfig, loading, error };
 };
