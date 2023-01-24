@@ -34,6 +34,26 @@
       "name": "Redmi note 8",
       "price": "1400.0",
       "id": 7
+    },
+    {
+      "name": "Mouse",
+      "price": "60",
+      "id": 8
+    },
+    {
+      "name": "Teclado",
+      "price": "50",
+      "id": 9
+    },
+    {
+      "name": "Xbox one s",
+      "price": "1600",
+      "id": 10
+    },
+    {
+      "name": "Controle xbox one s",
+      "price": "300",
+      "id": 11
     }
   ]
 }
