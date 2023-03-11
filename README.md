@@ -1,1 +1,1 @@
-Repositorio onde salvo as práticas do curso sobre ReactJS da plataforma udemy.
+Repositorio para as práticas do curso sobre ReactJS da plataforma udemy.
