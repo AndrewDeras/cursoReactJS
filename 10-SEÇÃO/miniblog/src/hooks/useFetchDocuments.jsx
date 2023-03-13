@@ -6,9 +6,7 @@ import {
   orderBy,
   onSnapshot,
   where,
-  QuerySnapshot
 } from "firebase/firestore";
-import { async } from "@firebase/util";
 
 export const useFetchDocuments = (docCollection, search = null, uid = null) => {
   const [documents, setDocuments] = useState(null);
