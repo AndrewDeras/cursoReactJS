@@ -1,22 +1,37 @@
 import React from 'react'
 
+//css
+import styles from './TaskList.module.css';
+
+//interface
+import { ITask } from '../../interfaces/Task'
+
 type Props = {
-  btnText: string;
+  taskList: ITask[];
+  handleDelete(id: number): void;
+  handleEdit(task: ITask): void;
 }
 
-const TaskList = ({ btnText }: Props) => {
+const TaskList = ({ taskList, handleDelete, handleEdit }: Props) => {
   return (
-    <form>
-      <div>
-        <label htmlFor="title">Título:</label>
-        <input type="text" name='title' placeholder='Título da tarefa' />
-      </div>
-      <div>
-        <label htmlFor="task">Tarefa:</label>
-        <input type="text" name='task' placeholder='Descrição da tarefa' />
-      </div>
-      <input type="submit" value={btnText} />
-    </form>
+    <>
+      {taskList.length > 0 ? (
+        taskList.map((task) => (
+          <div className={styles.task} key={task.id} >
+            <div className={styles.details} >
+              <h4>{task.title}</h4>
+              <p>{task.description}</p>
+            </div>
+            <div className={styles.actions} >
+              <i className="bi bi-pencil" onClick={() => handleEdit(task)} ></i>
+              <i className="bi bi-trash" onClick={() => { handleDelete(task.id) }} ></i>
+            </div>
+          </div>
+        ))
+      ) : (
+        <p>Não há tarefas cadastradas</p>
+      )}
+    </>
   )
 }
 
